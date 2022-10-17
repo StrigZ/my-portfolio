@@ -5,7 +5,7 @@ type Props = {};
 const Skills = (props: Props) => {
   return (
     <motion.div
-      className="flex relative flex-col text-center md:text-left xl:flex-row max-w-[2000px] xl:px-10 min-h-screen justify-center xl:space-y-0 mx-auto items-center"
+      className="flex relative flex-col text-center md:text-left xl:flex-row  xl:px-10 min-h-screen justify-center xl:space-y-0 mx-auto items-center"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1.5 }}
@@ -18,13 +18,15 @@ const Skills = (props: Props) => {
         Hover over a skill for current profieciency
       </h3>
 
-      <div className="grid grid-cols-4 gap-5">
-        <Skill />
-        <Skill />
-        <Skill />
-        <Skill />
-        <Skill />
-        <Skill />
+      <div className="grid grid-cols-3 md:grid-cols-4 gap-5 ">
+        <Skill directionLeft />
+        <Skill directionLeft />
+        <Skill directionLeft />
+        <Skill directionLeft />
+        <Skill directionLeft />
+        <Skill directionLeft />
+        <Skill directionLeft />
+        <Skill directionLeft />
         <Skill />
         <Skill />
         <Skill />
