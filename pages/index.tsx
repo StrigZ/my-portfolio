@@ -40,7 +40,7 @@ const Home = ({ pageInfo, experiences, skills, projects, socials }) => {
         <Header socials={socials} />
         {/* Hero */}
         <section id="hero" className="snap-start">
-          <Hero />
+          <Hero pageInfo={pageInfo} />
         </section>
         {/* About */}
         <section id="about" className="snap-center">
