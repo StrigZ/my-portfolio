@@ -11,9 +11,9 @@ type Props = {
 const Hero = ({ pageInfo }: Props) => {
   const [text, count] = useTypewriter({
     words: [
-      `Hi, The Name's ${pageInfo?.name}`,
-      "GuyWhoCodes4FUN",
-      "and-works-for-money.tsx",
+      `Hi, My Name's ${pageInfo?.name}`,
+      "<GuyWhoCodes4FUN />",
+      "and-strives-for-knowledge.tsx",
     ],
     loop: true,
     delaySpeed: 2000,
@@ -28,18 +28,12 @@ const Hero = ({ pageInfo }: Props) => {
         height={128}
         alt=""
       />
-      {/* {NextSanityImage(
-        pageInfo?.heroImage,
-        "relative rounded-full mx-auto h-32 w-32 bg-cover",
-        128,
-        128,
-        "intrinsic"
-      )} */}
+
       <div className="z-20">
-        <h2 className="text-sm uppercase text-gray-500 pb-2 tracking-[15px]">
+        <h2 className=" sm:text-sm uppercase text-gray-500 pb-2 tracking-[15px]">
           {pageInfo?.role}
         </h2>
-        <h1 className="text-5xl lg:text-6xl font-semibold px-10">
+        <h1 className="text-xl sm:text-2xl md:text-5xl lg:text-6xl font-semibold px-10">
           <span className="mr-3">{text}</span>
           <Cursor cursorColor="#f7ab0a" />
         </h1>
@@ -47,9 +41,9 @@ const Hero = ({ pageInfo }: Props) => {
           <Link href="#about">
             <button className="heroButton">About</button>
           </Link>
-          <Link href="#experience">
+          {/* <Link href="#experience">
             <button className="heroButton">Experience</button>
-          </Link>
+          </Link> */}
           <Link href="#skills">
             <button className="heroButton">Skills</button>
           </Link>
