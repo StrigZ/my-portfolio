@@ -25,23 +25,29 @@ const Projects = ({ projects }: Props) => {
             key={project._id}
             className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-10  md:p-20 h-screen "
           >
-            <motion.div
-              initial={{ y: -300, opacity: 0 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 1.2 }}
-              className="w-[350px]  h-[350px] sm:max-h-[400px] md:max-h-[450px]    
-              "
+            <a
+              href={project?.linkToBuild}
+              rel="noreferrer noopener"
+              target="_blank"
             >
-              <Image
-                className="object-contain w-full"
-                src={urlFor(project?.image).url()}
-                alt=""
-                width={144}
-                height={144}
-                layout="responsive"
-              />
-            </motion.div>
+              <motion.div
+                initial={{ y: -300, opacity: 0 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="w-[350px]  h-[350px]  max-h-[50vh]"
+              >
+                <Image
+                  className="object-contain w-full bg-transparent
+              
+                  "
+                  src={urlFor(project?.image).url()}
+                  alt=""
+                  width={144}
+                  height={144}
+                  layout="responsive"
+                />
+              </motion.div>
+            </a>
             <div className="space-y-10 px-0 md:px-10 max-w-6xl">
               <h4 className="text-base sm:text-xl md:text-4xl font-semibold text-center">
                 <span className="underline decoration-[#f7aboa]/50">
