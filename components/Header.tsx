@@ -58,7 +58,7 @@ const Header = ({ socials }: Props) => {
             bgColor="transparent"
           />
           <p className="uppercase hidden md:inline-flex text-sm text-gray-400">
-            Send me a message :D{" "}
+            Send me a message
           </p>
         </motion.section>
       </Link>
