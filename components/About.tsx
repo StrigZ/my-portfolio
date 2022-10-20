@@ -41,20 +41,13 @@ const About = ({ pageInfo }: Props) => {
           layout="responsive"
           alt=""
         />
-        {/* {NextSanityImage(
-          pageInfo?.heroImage,
-          "-mb-20 md:mb-0 flex-shrink-0 w-full rounded-full object-cover   md:rounded-lg",
-          144,
-          144,
-          "responsive"
-        )} */}
       </motion.div>
 
       <div className="space-y-10 px-0 md:px-10">
         <h4 className="text-3xl md:text-4xl font-semibold">
           Here is a{" "}
           <span className="underline decoration-[#f7ab0a]/50">little</span>{" "}
-          background
+          story about me
         </h4>
         <p className="text-base">{pageInfo?.backgroundInformation}</p>
       </div>
