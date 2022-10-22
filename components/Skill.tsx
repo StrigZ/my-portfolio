@@ -10,7 +10,7 @@ type Props = {
 };
 const Skill = ({ directionLeft, skill }: Props) => {
   return (
-    <div className="group relative flex w-12 h-12 sm:w-20 sm:h-20  md:w-28 md:h-28">
+    <div className="group relative flex w-16 h-16 sm:w-20 sm:h-20  md:w-28 md:h-28">
       <motion.div
         className="rounded-sm object-fill w-full h-full"
         initial={{ opacity: 0, y: directionLeft ? -200 : 200 }}
