@@ -10,7 +10,7 @@ type Props = {
 const Projects = ({ projects }: Props) => {
   return (
     <motion.div
-      className="h-screen relative flex overflow-hidden flex-col text-left md:flex-row max-w-full justify-evenly mx-auto items-center z-0"
+      className="h-screen relative flex overflow-hidden flex-col text-left md:flex-row max-w-full justify-evenly mx-auto items-center z-0 "
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1.5 }}
@@ -19,63 +19,62 @@ const Projects = ({ projects }: Props) => {
         Projects
       </h3>
 
-      <div className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#f7ab0a]/80">
+      <div className="relative w-screen flex overflow-x-scroll  overflow-y-hidden  z-20 scrollbar-none mt-auto mb-5 md:mb-10 px-5 sm:pl-[30vw] ">
         {projects?.map((project, i) => (
           <div
             key={project._id}
-            className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-10  md:p-20 h-screen "
+            className="w-screen  flex flex-col f items-center justify-center mx-2  min-w-[300px] md:min-w-[500px]  xl:min-w-[800px]  rounded-lg "
           >
-            <a
-              href={project?.linkToBuild}
-              rel="noreferrer noopener"
-              target="_blank"
-            >
-              <motion.div
-                initial={{ y: -300, opacity: 0 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                className="w-[350px]  h-[350px]  max-h-[50vh]"
+            <div className="bg-[#191919]/50   p-3  xl:p-10  h-[75vh] rounded-lg flex flex-col justify-between  space-y-5 overflow-y-scroll scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#f7ab0a]/80">
+              <a
+                href={project?.linkToBuild}
+                rel="noreferrer noopener"
+                target="_blank"
               >
-                <Image
-                  className="object-contain w-full bg-transparent
-              
-                  "
-                  src={urlFor(project?.image).url()}
-                  alt=""
-                  width={144}
-                  height={144}
-                  layout="responsive"
-                />
-              </motion.div>
-            </a>
-            <div className="space-y-10 px-0 md:px-10 max-w-6xl">
-              <h4 className="text-base sm:text-xl md:text-4xl font-semibold text-center">
-                <span className="underline decoration-[#f7aboa]/50">
-                  Case Study {i + 1} of {projects.length}
-                </span>
-                : {project?.title}
-              </h4>
-
-              <div className="flex flex-col justify-evenly items-center space-y-5">
-                <h3 className="uppercase tracking-[10px] text-gray-500 text-2xl indent-[20px]">
-                  Stack{" "}
-                </h3>
-                <div className="flex flex-row items-center space-x-5 justify-center ">
-                  {project?.technologies.map((tech) => (
-                    <Image
-                      key={tech?._id}
-                      src={urlFor(tech?.image).url()}
-                      width={40}
-                      height={40}
-                      alt=""
-                    />
-                  ))}
+                <motion.div
+                  className="-mt-5"
+                  initial={{ y: "-20vh", opacity: 0 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 1.5 }}
+                  viewport={{ once: true }}
+                >
+                  <Image
+                    className="object-contain block "
+                    src={urlFor(project?.image).url()}
+                    alt=""
+                    width={144}
+                    height={144}
+                    layout="responsive"
+                  />
+                </motion.div>
+              </a>
+              <div className="space-y-10 px-0 md:px-10 max-w-6xl">
+                <h4 className="text-xl xl:text-4xl font-semibold text-center">
+                  <span className="underline decoration-[#f7aboa]/50">
+                    Case Study {i + 1} of {projects.length}
+                  </span>
+                  : <span className="block mt-2">{project?.title}</span>
+                </h4>
+                <div className="flex flex-col justify-evenly items-center space-y-5">
+                  <h3 className="uppercase tracking-[10px] text-gray-500 text-2xl indent-[20px]">
+                    Stack{" "}
+                  </h3>
+                  <div className="flex flex-row items-center space-x-5 justify-center ">
+                    {project?.technologies.map((tech) => (
+                      <Image
+                        key={tech?._id}
+                        src={urlFor(tech?.image).url()}
+                        width={40}
+                        height={40}
+                        alt=""
+                      />
+                    ))}
+                  </div>
                 </div>
+                <p className="text-sm sm:text-base md:text-lg text-center md:text-left min-h-[100px]">
+                  {project?.summary}
+                </p>
               </div>
-
-              <p className="text-sm sm:text-base md:text-lg text-center md:text-left">
-                {project?.summary}
-              </p>
             </div>
           </div>
         ))}
