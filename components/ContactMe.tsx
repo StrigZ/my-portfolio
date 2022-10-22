@@ -16,16 +16,16 @@ const ContactMe = ({ contactme }: Props) => {
     window.location.href = `mailto:${formData.email}?subject=${formData.subject}?body=${formData.message}?name=${formData.name}`;
   };
   return (
-    <div className="h-screen relative flex flex-col tcenter md:text-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center">
+    <div className="h-screen relative flex flex-col text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center">
       <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl indent-[20px]">
         Contact
       </h3>
 
-      <div className="flex flex-col space-y-10 mt-28">
+      <div className="flex flex-col space-y-7 sm:space-y-10 mt-auto sm:mt-15 xl:mt-0 mb-5">
         <h4 className="text-lg sm:text-2xl md:text-4xl font-semibold text-center tracking-wide ">
-          I have got just what you need.{" "}
+          Have any questions?{" "}
           <span className="mt-1 block decoration-[#f7ab0a]/50 underline">
-            Lets Talk.
+            Send me a message.
           </span>
         </h4>
 
@@ -46,7 +46,7 @@ const ContactMe = ({ contactme }: Props) => {
 
         <form
           onSubmit={handleSubmit(onSubmit)}
-          className="flex flex-col space-y-2 w-fit mx-auto"
+          className="flex flex-col space-y-2 sm:w-fit mx-auto w-screen px-5 sm:px-0"
         >
           <div className="flex flex-col space-y-2 sm:flex-row sm:space-y-0 sm:space-x-2">
             <input
