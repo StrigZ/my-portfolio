@@ -19,11 +19,11 @@ const Projects = ({ projects }: Props) => {
         Projects
       </h3>
 
-      <div className="relative w-screen flex overflow-x-scroll  overflow-y-hidden  z-20 scrollbar-none mt-auto mb-5 md:mb-10 px-5 sm:pl-[30vw] ">
+      <div className="relative w-screen flex overflow-x-scroll  overflow-y-hidden  z-20  mt-auto mb-5 md:mb-10 px-5 sm:pl-[30vw]  scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#f7ab0a]/80">
         {projects?.map((project, i) => (
           <div
             key={project._id}
-            className="w-screen  flex flex-col f items-center justify-center mx-2  min-w-[300px] md:min-w-[500px]  xl:min-w-[800px]  rounded-lg "
+            className="w-screen  flex flex-col f items-center justify-center mx-2  min-w-[300px]  md:min-w-[500px]  xl:min-w-[800px]  rounded-lg "
           >
             <div className="bg-[#191919]/50   p-3  xl:p-10  h-[75vh] rounded-lg flex flex-col justify-between  space-y-5 overflow-y-scroll scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#f7ab0a]/80">
               <a
