@@ -13,7 +13,7 @@ type Inputs = {
 const ContactMe = ({ contactme }: Props) => {
   const { register, handleSubmit } = useForm<Inputs>();
   const onSubmit: SubmitHandler<Inputs> = (formData) => {
-    window.location.href = `mailto:${formData.email}?subject=${formData.subject}?body=${formData.message}?name=${formData.name}`;
+    window.location.href = `mailto:${contactme?.email}?subject=${formData.subject}&body=${formData.message}&name=${formData.name}`;
   };
   return (
     <div className="h-screen relative flex flex-col text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center">
@@ -46,21 +46,21 @@ const ContactMe = ({ contactme }: Props) => {
 
         <form
           onSubmit={handleSubmit(onSubmit)}
-          className="flex flex-col space-y-2 sm:w-fit mx-auto w-screen px-5 sm:px-0"
+          className="flex flex-col space-y-2 sm:w-fit mx-auto w-screen px-5 sm:px-0 min-w-full"
         >
           <div className="flex flex-col space-y-2 sm:flex-row sm:space-y-0 sm:space-x-2">
             <input
-              className="contactInput"
+              className="contactInput w-full"
               {...register("name")}
               placeholder="Name"
               type="text"
             />
-            <input
+            {/* <input
               className="contactInput"
               {...register("email")}
               placeholder="Email"
               type="email"
-            />
+            /> */}
           </div>
           <input
             className="contactInput"
