@@ -1,7 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 @layer components {
   .heroButton {
     @apply px-6 py-2 border border-[#242424] rounded-full uppercase text-xs tracking-widest text-gray-500 transition-all hover:border-[#f7ab0a]/40 hover:text-[#f7ab0a]/40;
@@ -10,4 +10,8 @@
   .contactInput {
     @apply outline-none bg-slate-400/10 rounded-sm border-b px-6 py-4 border-[#242424] to-gray-500 placeholder-gray-500 transition-all focus:text-[#f7ab0a]/40 focus:border-[#f7ab0a]/40;
   }
+}
+
+body {
+  font-family: "Roboto Slab", serif;
 }

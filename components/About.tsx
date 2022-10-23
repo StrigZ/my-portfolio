@@ -14,7 +14,7 @@ const About = ({ pageInfo }: Props) => {
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1.5 }}
     >
-      <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl indent-[20px]">
+      <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl indent-[20px] font-bold">
         About
       </h3>
 
@@ -43,8 +43,8 @@ const About = ({ pageInfo }: Props) => {
         />
       </motion.div>
 
-      <div className="space-y-10 px-0 md:px-10 mb-5   md:mt-32">
-        <h4 className="text-2xl md:text-4xl font-semibold">
+      <div className="space-y-10 px-0 md:px-10 mb-5   md:mt-32 ">
+        <h4 className="text-2xl md:text-4xl font-semibold ">
           Here is a{" "}
           <span className="underline decoration-[#f7ab0a]/50">little</span>{" "}
           story about me

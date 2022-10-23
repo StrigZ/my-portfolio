@@ -15,7 +15,7 @@ const Projects = ({ projects }: Props) => {
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1.5 }}
     >
-      <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl indent-[20px]">
+      <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl indent-[20px] font-bold">
         Projects
       </h3>
 
