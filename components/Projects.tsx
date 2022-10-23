@@ -27,6 +27,7 @@ const Projects = ({ projects }: Props) => {
           >
             <div className="bg-[#191919]/50   p-3  xl:p-10  h-[75vh] rounded-lg flex flex-col justify-between  space-y-5 overflow-y-scroll scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#f7ab0a]/80">
               <a
+                className="outline-none"
                 href={project?.linkToBuild}
                 rel="noreferrer noopener"
                 target="_blank"
