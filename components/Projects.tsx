@@ -16,7 +16,7 @@ const Projects = ({ projects }: Props) => {
       transition={{ duration: 1.5 }}
     >
       <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl indent-[20px]">
-        Projects test
+        Projects
       </h3>
 
       <div className="relative w-screen flex overflow-x-scroll  overflow-y-hidden  z-20 scrollbar-none mt-auto mb-5 md:mb-10 px-5 sm:pl-[30vw] ">
